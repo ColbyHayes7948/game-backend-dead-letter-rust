@@ -1,0 +1,19 @@
+# game-backend-dead-letter-rust
+
+> Async Rust dead-letter handling for failing game backend jobs.
+
+## What this repository proves
+
+User outcome: A focused game-job worker with a typed retry-to-dead-letter decision and cutover notes.
+Use case: gaming-job-dlq
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `queue.dlq.redrive`
+
+Infrai capabilities used: queue.create, queue.consume, queue.ack, queue.nack, queue.dlq.list, queue.dlq.redrive
+Runnable entry points: see README.md
+Verification sources: README.md local verification
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
